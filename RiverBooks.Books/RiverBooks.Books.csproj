@@ -7,7 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNet.App"/>
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="FastEndpoints" Version="7.1.1" />
+    </ItemGroup>
 </Project>
