@@ -1,5 +1,6 @@
 using FastEndpoints;
 using RiverBooks.Books;
+using RiverBooks.ServiceDefaults;
 using RiverBooks.Web;
 using Scalar.AspNetCore;
 

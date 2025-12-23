@@ -15,16 +15,11 @@ internal class BookService(
         return books;
     }
 
-    public async Task<BookDto> GetBookByIdAsync(Guid id)
+    public async Task<BookDto?> GetBookByIdAsync(Guid id)
     {
         var book = await bookRepository.GetByIdAsync(id);
 
-        if (book is not null)
-        {
-            return new BookDto(book.Id, book.Title, book.Author, book.Price);
-        }
-
-        throw new NotImplementedException();
+        return book is not null ? new BookDto(book.Id, book.Title, book.Author, book.Price) : null;
     }
 
     public async Task CreateBookAsync(BookDto newBook)
