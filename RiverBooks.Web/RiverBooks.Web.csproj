@@ -8,11 +8,16 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Scalar.AspNetCore" Version="2.11.9" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\RiverBooks.Books\RiverBooks.Books.csproj" />
+      <ProjectReference Include="..\RiverBooks.ServiceDefaults\RiverBooks.ServiceDefaults.csproj" />
     </ItemGroup>
 
 </Project>

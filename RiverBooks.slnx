@@ -1,6 +1,9 @@
 <Solution>
+  <Folder Name="/Aspire/">
+    <Project Path="RiverBooks.AppHost/RiverBooks.AppHost.csproj" />
+    <Project Path="RiverBooks.ServiceDefaults/RiverBooks.ServiceDefaults.csproj" />
+  </Folder>
   <Folder Name="/Solution Items/">
-    <File Path=".editorconfig" />
     <File Path=".gitignore" />
   </Folder>
   <Project Path="RiverBooks.Books/RiverBooks.Books.csproj" />
