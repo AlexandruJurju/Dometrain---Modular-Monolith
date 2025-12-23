@@ -12,11 +12,13 @@ internal class ListBooksEndpoint(
         AllowAnonymous();
     }
 
-    public override Task HandleAsync(CancellationToken ct)
+    public override async Task HandleAsync(CancellationToken ct)
     {
-        return Task.FromResult(new ListBooksResponse
-        {
-            Books = bookService.ListBooks()
-        });
+        var books = await bookService.ListBooksAsync();
+
+        await Send.OkAsync(
+            new ListBooksResponse { Books = books },
+            cancellation: ct
+        );
     }
 }
