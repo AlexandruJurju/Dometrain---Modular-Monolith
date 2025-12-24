@@ -6,7 +6,9 @@
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
   </Folder>
+  <Project Path="RiverBooks.Books.Contracts/RiverBooks.Books.Contracts.csproj" />
   <Project Path="RiverBooks.Books/RiverBooks.Books.csproj" />
+  <Project Path="RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" />
   <Project Path="RiverBooks.Users/RiverBooks.Users.csproj" />
   <Project Path="RiverBooks.Web/RiverBooks.Web.csproj" />
 </Solution>
