@@ -1,16 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RiverBooks.Books.Data;
 
 namespace RiverBooks.Web;
 
 public static class MigrationExtensions
 {
-    public static void ApplyMigrations(this IApplicationBuilder app)
+    public static void ApplyMigrations<TDb>(this IApplicationBuilder app) where TDb : DbContext
     {
         using IServiceScope scope = app.ApplicationServices.CreateScope();
 
-        using BookDbContext dbContext =
-            scope.ServiceProvider.GetRequiredService<BookDbContext>();
+        using TDb dbContext =
+            scope.ServiceProvider.GetRequiredService<TDb>();
 
         dbContext.Database.Migrate();
     }

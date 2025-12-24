@@ -5,7 +5,7 @@ using RiverBooks.Books.Domain;
 namespace RiverBooks.Books;
 
 public class EfBookRepository(
-    BookDbContext dbContext
+    BooksDbContext dbContext
 ) : IBookRepository
 {
     public async Task<Book?> GetByIdAsync(Guid id)

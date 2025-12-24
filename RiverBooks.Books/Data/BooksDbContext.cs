@@ -4,11 +4,11 @@ using RiverBooks.Books.Domain;
 
 namespace RiverBooks.Books.Data;
 
-public class BookDbContext : DbContext
+public class BooksDbContext : DbContext
 {
     public DbSet<Book> Books { get; set; }
 
-    public BookDbContext(DbContextOptions<BookDbContext> options) : base(options)
+    public BooksDbContext(DbContextOptions<BooksDbContext> options) : base(options)
     {
     }
 

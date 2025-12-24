@@ -4,17 +4,19 @@ namespace RiverBooks.Books.Endpoints;
 
 public class GetBookByIdEndpoint(
     IBookService bookService
-) : Endpoint<GetBookByIdRequest, BookDto>
+) : EndpointWithoutRequest<BookDto>
 {
     public override void Configure()
     {
-        Get("/books/{Id}");
+        Get("api/books/{id}");
         AllowAnonymous();
     }
 
-    public override async Task HandleAsync(GetBookByIdRequest req, CancellationToken ct)
+    public override async Task HandleAsync(CancellationToken ct)
     {
-        var book = await bookService.GetBookByIdAsync(req.Id);
+        var id = Route<Guid>("id");
+
+        var book = await bookService.GetBookByIdAsync(id);
 
         if (book is null)
         {

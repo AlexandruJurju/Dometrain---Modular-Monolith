@@ -4,17 +4,19 @@ namespace RiverBooks.Books.Endpoints;
 
 public class DeleteBookEndpoint(
     IBookService bookService
-) : Endpoint<DeleteBookRequest>
+) : EndpointWithoutRequest<DeleteBookRequest>
 {
     public override void Configure()
     {
-        Delete("/books/{id}");
+        Delete("api/books/{id}");
         AllowAnonymous();
     }
 
-    public override async Task HandleAsync(DeleteBookRequest req, CancellationToken ct)
+    public override async Task HandleAsync(CancellationToken ct)
     {
-        await bookService.DeleteBookAsync(req.Id);
+        var id = Route<Guid>("id");
+
+        await bookService.DeleteBookAsync(id);
 
         await Send.NoContentAsync(ct);
     }

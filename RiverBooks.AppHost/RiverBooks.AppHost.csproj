@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\RiverBooks.Users\RiverBooks.Users.csproj" />
       <ProjectReference Include="..\RiverBooks.Web\RiverBooks.Web.csproj" />
     </ItemGroup>
 

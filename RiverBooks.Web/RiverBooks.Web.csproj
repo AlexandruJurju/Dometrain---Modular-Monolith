@@ -7,6 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FastEndpoints.Security" Version="7.1.1" />
+        <PackageReference Include="FastEndpoints.Swagger" Version="7.1.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.1">
           <PrivateAssets>all</PrivateAssets>
@@ -18,6 +20,7 @@
     <ItemGroup>
       <ProjectReference Include="..\RiverBooks.Books\RiverBooks.Books.csproj" />
       <ProjectReference Include="..\RiverBooks.ServiceDefaults\RiverBooks.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\RiverBooks.Users\RiverBooks.Users.csproj" />
     </ItemGroup>
 
 </Project>

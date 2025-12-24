@@ -8,7 +8,7 @@ public class CreateBookEndpoint(
 {
     public override void Configure()
     {
-        Post("/books");
+        Post("api/books");
         AllowAnonymous();
     }
 

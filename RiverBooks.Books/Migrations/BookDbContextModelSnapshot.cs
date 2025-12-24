@@ -10,7 +10,7 @@ using RiverBooks.Books.Data;
 
 namespace RiverBooks.Books.Migrations
 {
-    [DbContext(typeof(BookDbContext))]
+    [DbContext(typeof(BooksDbContext))]
     partial class BookDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
