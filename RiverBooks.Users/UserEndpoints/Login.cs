@@ -1,4 +1,5 @@
-﻿using FastEndpoints;
+﻿using System.Security.Claims;
+using FastEndpoints;
 using FastEndpoints.Security;
 using Microsoft.AspNetCore.Identity;
 
@@ -35,8 +36,10 @@ public class Login(
         var token = JwtBearer.CreateToken(options =>
         {
             options.SigningKey = jwtSecret;
-            options.ExpireAt = DateTime.UtcNow.AddHours(1);
+            options.ExpireAt = DateTime.UtcNow.AddHours(24);
+            options.User.Claims.Add(("EmailAddress", user.Email!));
         });
+
 
         await Send.OkAsync(token, ct);
     }

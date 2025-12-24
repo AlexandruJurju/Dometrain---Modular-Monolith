@@ -67,7 +67,8 @@ Content-Type: application/json
 
 ###
 
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjY1NjIxMDAsImlhdCI6MTc2NjU1ODUwMCwibmJmIjoxNzY2NTU4NTAwfQ.OE7NBVHPnAlbpIvhAF0CrNW9q179qEQ4YCms2A0YewE
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjY2NTE1NDAsImlhdCI6MTc2NjU2NTE0MCwiRW1haWxBZGRyZXNzIjoic3RldmVAdGVzdC5jb20iLCJuYmYiOjE3NjY1NjUxNDB9.rUJMzRjhZJpsWTBFO9RSAK68OVAXifM-KvqhoJWPucI
+
 
 # Add item to cart
 POST https://localhost:7283/api/cart
@@ -83,7 +84,7 @@ Content-Type: application/json
 ###
 
 # List items in cart
-GET {{RiverBooks.Web_HostAddress}}/cart
+GET https://localhost:7283/api/cart
 Accept: application/json
 Authorization: Bearer {{token}}
 
