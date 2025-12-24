@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RiverBooks.Users.Domain;
+using RiverBooks.Users.Infrastructure;
 using Serilog;
 
 namespace RiverBooks.Users;
